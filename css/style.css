@@ -312,12 +312,6 @@ a:focus {
     background: #ffffff;
 }
 
-.header .content-inner {
-    padding: 100px 30px;
-    background: url(../img/profile.png) right bottom no-repeat;
-    background-size: contain;
-}
-
 .header p {
     color:#1E88E5;
     font-size: 22px;
