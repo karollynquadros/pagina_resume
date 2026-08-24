@@ -797,6 +797,72 @@ a:focus {
     line-height: 1.6;
 }
 
+/**********************************/
+/*********** Awards CSS ***********/
+/**********************************/
+.awards {
+    position: relative;
+    padding: 60px 30px 30px 30px;
+    background: #ffffff;
+    border-bottom: 30px solid #F6D155;
+}
+
+.awards .srv-col {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.awards .srv-col i {
+    font-size: 30px;
+    color: #FF6F61;
+    margin-bottom: 15px;
+}
+
+.awards .srv-col h3 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.awards .srv-col p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/**********************************/
+/**** Adjustments for Details *****/
+/**********************************/
+.exp-col details,
+.edu-col details {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.exp-col summary,
+.edu-col summary {
+    font-weight: bold;
+    color: #222222;
+    outline: none;
+}
+
+.exp-col details[open] summary,
+.edu-col details[open] summary {
+    color: #FF6F61;
+}
+
+.details-content ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.details-content ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
 
 /**********************************/
 /********** References CSS *********/
