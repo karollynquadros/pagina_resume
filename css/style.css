@@ -1102,3 +1102,31 @@ a:focus {
     color: #222222;
 }
 
+
+/* Adicione no final do seu arquivo style.css */
+.edu-col details {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.edu-col summary {
+    font-weight: bold;
+    color: #444; /* Cor do título clicável */
+    outline: none;
+}
+
+.edu-col details[open] summary {
+    color: #f72424; /* Cor diferente quando aberto (opcional, mude para a cor do seu site) */
+}
+
+.details-content {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Fundo leve para destacar */
+    border-left: 3px solid #f72424; /* Barra lateral (mude para a cor do seu site) */
+    border-radius: 4px;
+}
+
+.details-content p {
+    margin-bottom: 8px !important; /* Ajuste o espaçamento entre os parágrafos internos */
+}
