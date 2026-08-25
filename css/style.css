@@ -2,20 +2,20 @@
 /********** General CSS ***********/
 /**********************************/
 body {
-    color: #666666;
-    background: #F6D155;
+    color: #4A5056; /* Texto em cinza escuro para melhor leitura */
+    background: #E2E8F0; /* Fundo geral em Cinza Gelo */
     font-family: 'Open Sans', sans-serif;
 }
 
 a {
-    color: #222222;
+    color: #2D3748;
     transition: all .3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #FF6F61;
+    color: #4A5056;
     outline: none;
     text-decoration: none;
 }
@@ -34,6 +34,10 @@ a:focus {
     background: #4A5056 !important; /* Antracite / Cinza Escuro */
 }
 
+.wrapper .content {
+    background: #E2E8F0; /* Ajuste do fundo do conteúdo */
+}
+
 /* Fundo do Menu Mobile/Padrão */
 .navbar {
     background: #4A5056 !important;
@@ -41,7 +45,7 @@ a:focus {
 
 /* Links do Menu */
 .navbar-expand-md .navbar-nav .nav-link {
-    color: #E2E8F0 !important; /* Texto Cinza Claro/Branco */
+    color: #E2E8F0 !important; /* Texto Cinza Claro */
     transition: all .3s;
 }
 
@@ -57,7 +61,7 @@ a:focus {
 .navbar-expand-md .navbar-nav .nav-link:hover,
 .navbar-expand-md .navbar-nav .nav-link.active {
     color: #FFFFFF !important;
-    background-color: rgba(255, 255, 255, 0.08); /* Destaque sutil */
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 .navbar-expand-md .navbar-nav .nav-link:hover i,
@@ -72,14 +76,19 @@ a:focus {
 
 /* Rodapé da Sidebar (Ícones Sociais na barra lateral) */
 @media (min-width: 768px) {
+    .wrapper .content::before,
+    .wrapper .content::after {
+        background: #E2E8F0; /* Borda superior e inferior fixas em Cinza Gelo */
+    }
+
     .sidebar .sidebar-footer {
         background: #4A5056 !important;
     }
 
     .sidebar .sidebar-footer a {
         color: #4A5056 !important;
-        background: #E2E8F0 !important; /* Círculos dos ícones em tom claro */
-        border-radius: 50%; /* Círculos arredondados conforme a imagem 3 */
+        background: #E2E8F0 !important;
+        border-radius: 50%;
     }
 
     .sidebar .sidebar-footer a:hover {
@@ -87,6 +96,7 @@ a:focus {
         background: #2D3748 !important;
     }
 }
+
 
 /**********************************/
 /******** Back to Top CSS *********/
@@ -106,16 +116,16 @@ a:focus {
 }
 
 .back-to-top i {
-    color: #222222;
+    color: #4A5056;
 }
 
 .back-to-top i:hover {
-    color: #FF6F61;
+    color: #2D3748;
 }
 
 .back-to-top {
-    -webkit-animation: action 1s infinite  alternate;
-    animation: action 1s infinite  alternate;
+    -webkit-animation: action 1s infinite alternate;
+    animation: action 1s infinite alternate;
 }
 
 @-webkit-keyframes action {
@@ -138,14 +148,14 @@ a:focus {
 }
 
 .header p {
-    color:#1E88E5;
+    color: #4A5056;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .header h1 {
-    color: #222222;
+    color: #2D3748;
     font-size: 50px;
     font-weight: 700;
 }
@@ -164,27 +174,27 @@ a:focus {
 .header .typed-cursor {
     font-size: 25px;
     font-weight: 300;
-    color: #222222;
+    color: #2D3748;
 }
 
 .large-btn .content-inner {
     font-size: 0;
-    border-bottom: 30px solid #F6D155;
+    border-bottom: 30px solid #E2E8F0; /* Amarelo substituído por Cinza Gelo */
 }
 
 .large-btn .btn {
     position: relative;
     width: 50%;
     padding: 15px 0;
-    color: #FF6F61;
+    color: #FFFFFF;
     font-size: 20px;
-    background: #222222;
+    background: #4A5056;
     border-radius: 0;
 }
 
 .large-btn .btn:last-child {
-    color: #222222;
-    background: #FF6F61;
+    color: #FFFFFF;
+    background: #718096;
 }
 
 .large-btn .btn i {
@@ -218,7 +228,7 @@ a:focus {
 }
 
 .content-header h2 {
-    color: #222222;
+    color: #2D3748;
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -233,7 +243,7 @@ a:focus {
     height: 3px;
     bottom: 0;
     left: 0;
-    background: #FF6F61;
+    background: #4A5056; /* Linha divisória em Antracite */
 }
 
 
@@ -244,9 +254,8 @@ a:focus {
     position: relative;
     padding: 60px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #F6D155;
+    border-bottom: 30px solid #E2E8F0; /* Amarelo substituído por Cinza Gelo */
 }
-
 
 .about img {
     width: 100%;
@@ -261,14 +270,14 @@ a:focus {
 
 .about .btn {
     border-radius: 0;
-    color: #222222;
-    background: #FF6F61;
+    color: #ffffff;
+    background: #4A5056;
     transition: all .3s;
 }
 
 .about .btn:hover {
-    color: #FF6F61;
-    background: #222222;
+    color: #ffffff;
+    background: #2D3748;
 }
 
 .about .skills {
@@ -292,14 +301,14 @@ a:focus {
 
 .about .progress {
     height: 5px;
-    border: 1px solid #FF6F61;
+    border: 1px solid #A0AEC0;
     border-radius: 0;
     background: #ffffff;
 }
 
 .about .progress .progress-bar {
     width: 1px;
-    background: #FF6F61;
+    background: #4A5056;
     border-radius: 0;
     transition: 1s;
 }
@@ -312,15 +321,15 @@ a:focus {
     position: relative;
     padding: 60px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #F6D155;
+    border-bottom: 30px solid #E2E8F0;
 }
 
 .education .edu-col {
     position: relative;
     width: 100%;
     padding: 20px 0 20px 20px;
-    border-left: 1px solid #FF6F61;
-    border-bottom: 1px solid #FF6F61;
+    border-left: 1px solid #CBD5E0;
+    border-bottom: 1px solid #CBD5E0;
 }
 
 .education .col-md-6:first-child .edu-col {
@@ -357,14 +366,14 @@ a:focus {
     content: "";
     width: 11px;
     height: 11px;
-    background: #FF6F61;
+    background: #4A5056;
     top: 5px;
     left: -26px;
     border-radius: 5px;
 }
 
 .education .edu-col span i {
-    color: #FF6F61;
+    color: #4A5056;
 }
 
 .education .edu-col h3 {
@@ -385,15 +394,15 @@ a:focus {
     position: relative;
     padding: 60px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #F6D155;
+    border-bottom: 30px solid #E2E8F0;
 }
 
 .experience .exp-col {
     position: relative;
     width: 100%;
     padding: 20px 0 20px 20px;
-    border-left: 1px solid #FF6F61;
-    border-bottom: 1px solid #FF6F61;
+    border-left: 1px solid #CBD5E0;
+    border-bottom: 1px solid #CBD5E0;
 }
 
 .experience .col-md-6:first-child .exp-col {
@@ -430,14 +439,14 @@ a:focus {
     content: "";
     width: 11px;
     height: 11px;
-    background: #FF6F61;
+    background: #4A5056;
     top: 5px;
     left: -26px;
     border-radius: 5px;
 }
 
 .experience .exp-col span i {
-    color: #FF6F61;
+    color: #4A5056;
 }
 
 .experience .exp-col h3 {
@@ -472,7 +481,7 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #F6D155;
+    border-bottom: 30px solid #E2E8F0;
 }
 
 .publications .pub-col {
@@ -483,7 +492,7 @@ a:focus {
 
 .publications .pub-col i {
     font-size: 30px;
-    color: #FF6F61;
+    color: #4A5056;
     margin-bottom: 15px;
 }
 
@@ -506,13 +515,12 @@ a:focus {
     line-height: 1.6;
 }
 
-/* Estilo para links dentro das publicações (opcional, se houver) */
 .publications .pub-col a {
-    color: #FF6F61;
+    color: #4A5056;
 }
 
 .publications .pub-col a:hover {
-    color: #222222;
+    color: #2D3748;
 }
 
 
@@ -523,10 +531,9 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #F6D155;
+    border-bottom: 30px solid #E2E8F0;
 }
 
-/* Reutilizando o estilo de coluna da seção service, adaptando para skills */
 .skills .srv-col {
     position: relative;
     width: 100%;
@@ -535,7 +542,7 @@ a:focus {
 
 .skills .srv-col i {
     font-size: 30px;
-    color: #FF6F61;
+    color: #4A5056;
     margin-bottom: 15px;
 }
 
@@ -551,7 +558,6 @@ a:focus {
     line-height: 1.6;
 }
 
-/* Reutilizando as classes antigas de skill se o HTML ainda as usar */
 .skills .skill-name {
     margin-top: 15px;
 }
@@ -569,14 +575,14 @@ a:focus {
 
 .skills .progress {
     height: 5px;
-    border: 1px solid #FF6F61;
+    border: 1px solid #A0AEC0;
     border-radius: 0;
     background: #ffffff;
 }
 
 .skills .progress .progress-bar {
     width: 1px;
-    background: #FF6F61;
+    background: #4A5056;
     border-radius: 0;
     transition: 1s;
 }
@@ -589,7 +595,7 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #F6D155;
+    border-bottom: 30px solid #E2E8F0;
 }
 
 .languages .srv-col {
@@ -600,7 +606,7 @@ a:focus {
 
 .languages .srv-col i {
     font-size: 30px;
-    color: #FF6F61;
+    color: #4A5056;
     margin-bottom: 15px;
 }
 
@@ -623,7 +629,7 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #F6D155;
+    border-bottom: 30px solid #E2E8F0;
 }
 
 .awards .srv-col {
@@ -634,7 +640,7 @@ a:focus {
 
 .awards .srv-col i {
     font-size: 30px;
-    color: #FF6F61;
+    color: #4A5056;
     margin-bottom: 15px;
 }
 
@@ -662,13 +668,13 @@ a:focus {
 .exp-col summary,
 .edu-col summary {
     font-weight: bold;
-    color: #222222;
+    color: #2D3748;
     outline: none;
 }
 
 .exp-col details[open] summary,
 .edu-col details[open] summary {
-    color: #FF6F61;
+    color: #4A5056;
 }
 
 .details-content ul {
@@ -690,7 +696,7 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #F6D155; /* Opcional, se for a última seção */
+    border-bottom: 30px solid #E2E8F0;
 }
 
 .references .srv-col {
@@ -701,7 +707,7 @@ a:focus {
 
 .references .srv-col i {
     font-size: 30px;
-    color: #FF6F61;
+    color: #4A5056;
     margin-bottom: 15px;
 }
 
@@ -734,15 +740,15 @@ a:focus {
 
 .contact .contact-info p i {
     width: 25px;
-    color: #FF6F61;
+    color: #4A5056;
 }
 
 .contact .contact-info p a {
-    color: #666666;
+    color: #4A5056;
 }
 
 .contact .contact-info p a:hover {
-    color: #FF6F61;
+    color: #2D3748;
     text-decoration: none;
 }
 
@@ -754,8 +760,8 @@ a:focus {
     width: 35px;
     height: 35px;
     padding: 5px 0;
-    color: #222222;
-    background: #FF6F61;
+    color: #ffffff;
+    background: #4A5056;
     border-radius: 0;
     margin-top: 15px;
     margin-right: 15px;
@@ -767,8 +773,8 @@ a:focus {
 }
 
 .contact .social a:hover {
-    color: #FF6F61;
-    background: #222222;
+    color: #ffffff;
+    background: #2D3748;
 }
 
 .contact .form {
@@ -783,19 +789,19 @@ a:focus {
 
 .contact .form .form-control:focus {
     box-shadow: none;
-    border-color: #FF6F61;
+    border-color: #4A5056;
 }
 
 .contact .form .btn {
-    color: #222222;
-    background: #FF6F61;
+    color: #ffffff;
+    background: #4A5056;
     border-radius: 0;
     transition: all .3s;
 }
 
 .contact .form .btn:hover {
-    color: #FF6F61;
-    background: #222222;
+    color: #ffffff;
+    background: #2D3748;
 }
 
 
@@ -806,7 +812,7 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 30px 30px 0 30px;
-    background: #F6D155;
+    background: #E2E8F0; /* Amarelo substituído por Cinza Gelo */
 }
 
 .footer .col-md-6:last-child {
@@ -821,21 +827,21 @@ a:focus {
 }
 
 .footer p {
-    color: #222222;
+    color: #4A5056;
     margin: 0;
 }
 
 .footer a {
-    color: #FF6F61;
+    color: #2D3748;
     font-weight: 600;
 }
 
 .footer a:hover {
-    color: #222222;
+    color: #4A5056;
 }
 
 
-/* Adicione no final do seu arquivo style.css */
+/* Adicionais para detalhes de educação e experiência */
 .edu-col details {
     margin-top: 10px;
     cursor: pointer;
@@ -843,22 +849,22 @@ a:focus {
 
 .edu-col summary {
     font-weight: bold;
-    color: #444; /* Cor do título clicável */
+    color: #2D3748;
     outline: none;
 }
 
 .edu-col details[open] summary {
-    color: #f72424; /* Cor diferente quando aberto (opcional, mude para a cor do seu site) */
+    color: #4A5056;
 }
 
 .details-content {
     margin-top: 15px;
     padding: 15px;
-    background-color: #f9f9f9; /* Fundo leve para destacar */
-    border-left: 3px solid #f72424; /* Barra lateral (mude para a cor do seu site) */
+    background-color: #F7FAFC;
+    border-left: 3px solid #4A5056;
     border-radius: 4px;
 }
 
 .details-content p {
-    margin-bottom: 8px !important; /* Ajuste o espaçamento entre os parágrafos internos */
+    margin-bottom: 8px !important;
 }
