@@ -381,34 +381,29 @@ a:focus {
 /*********** About CSS ************/
 /**********************************/
 .about {
-  position: relative;
-  padding: 60px 30px;
-  background: #ffffff;
-  border-bottom: 30px solid #E2E8F0;
+    position: relative;
+    padding: 60px 30px;
+    background: #ffffff;
+    border-bottom: 30px solid #E2E8F0;
 }
 
-
-.about img {
-    width: 100%;
-    height: auto;
-}
-
-@media(max-width: 767.98px) {
-    .about img {
-        margin-bottom: 15px;
-    }
+.about p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4A5056;
+    margin-bottom: 15px;
 }
 
 .about .btn {
     border-radius: 0;
-    color: #222222;
-    background: #FF6F61;
+    color: #ffffff;
+    background: #4A5056;
     transition: all .3s;
 }
 
 .about .btn:hover {
-    color: #FF6F61;
-    background: #222222;
+    color: #ffffff;
+    background: #2D3748;
 }
 
 .about .skills {
@@ -424,6 +419,7 @@ a:focus {
     margin-bottom: 5px;
     font-size: 16px;
     font-weight: 400;
+    color: #2D3748;
 }
 
 .about .skill-name p:last-child {
@@ -432,18 +428,17 @@ a:focus {
 
 .about .progress {
     height: 5px;
-    border: 1px solid #FF6F61;
+    border: 1px solid #CBD5E0;
     border-radius: 0;
     background: #ffffff;
 }
 
 .about .progress .progress-bar {
     width: 1px;
-    background: #FF6F61;
+    background: #4A5056;
     border-radius: 0;
     transition: 1s;
 }
-
 
 /**********************************/
 /********* Education CSS **********/
