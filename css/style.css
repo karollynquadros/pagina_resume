@@ -8,14 +8,14 @@ body {
 }
 
 a {
-    color: #222222;
+    color: #2D3748;
     transition: all .3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #FF6F61;
+    color: #4A5056;
     outline: none;
     text-decoration: none;
 }
@@ -207,8 +207,9 @@ a:focus {
         margin: 0 15px 15px 0;
         text-align: center;
         font-size: 18px;
-        color: #222222;
-        background: #FF6F61;
+        color: #4A5056;
+        background: #E2E8F0;
+        border-radius: 50%;
     }
     
     .sidebar .sidebar-footer a:last-child {
@@ -216,8 +217,8 @@ a:focus {
     }
     
     .sidebar .sidebar-footer a:hover {
-        color: #FF6F61;
-        background: #ffffff;
+        color: #FFFFFF;
+        background: #2D3748;
     }
     
     .sidebar:hover .sidebar-footer {
@@ -984,7 +985,7 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 30px 30px 0 30px;
-    background: #F6D155;
+    background: #E2E8F0;
 }
 
 .footer .col-md-6:last-child {
@@ -1004,7 +1005,7 @@ a:focus {
 }
 
 .footer a {
-    color: #FF6F61;
+    color: #2D3748;
     font-weight: 600;
 }
 
