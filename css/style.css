@@ -282,11 +282,11 @@ a:focus {
 }
 
 .back-to-top i {
-    color: #222222;
+    color: #4A5056;
 }
 
 .back-to-top i:hover {
-    color: #FF6F61;
+    color: #2D3748;
 }
 
 .back-to-top {
@@ -317,14 +317,14 @@ a:focus {
 }
 
 .header p {
-    color:#1E88E5;
+    color:#4A5056;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .header h1 {
-    color: #222222;
+    color: #2D3748;
     font-size: 50px;
     font-weight: 700;
 }
@@ -343,46 +343,7 @@ a:focus {
 .header .typed-cursor {
     font-size: 25px;
     font-weight: 300;
-    color: #222222;
-}
-
-.large-btn .content-inner {
-    font-size: 0;
-    border-bottom: 30px solid #E2E8F0;
-}
-
-.large-btn .btn {
-    position: relative;
-    width: 50%;
-    padding: 15px 0;
-    color: #FF6F61;
-    font-size: 20px;
-    background: #222222;
-    border-radius: 0;
-}
-
-.large-btn .btn:last-child {
-    color: #222222;
-    background: #FF6F61;
-}
-
-.large-btn .btn i {
-    margin-right: 8px;
-}
-
-.large-btn .btn::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: all .3s;
-}
-
-.large-btn .btn:hover::after {
-    width: 100%;
-    background: rgba(255, 255, 255, .1);
+    color: #2D3748;
 }
 
 
@@ -491,15 +452,15 @@ a:focus {
     position: relative;
     padding: 60px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #F6D155;
+    border-bottom: 30px solid #E2E8F0;
 }
 
 .education .edu-col {
     position: relative;
     width: 100%;
     padding: 20px 0 20px 20px;
-    border-left: 1px solid #FF6F61;
-    border-bottom: 1px solid #FF6F61;
+    border-left: 1px solid #CBD5E0;
+    border-bottom: 1px solid #CBD5E0;
 }
 
 .education .col-md-6:first-child .edu-col {
@@ -536,14 +497,14 @@ a:focus {
     content: "";
     width: 11px;
     height: 11px;
-    background: #FF6F61;
+    background: #4A5056;
     top: 5px;
     left: -26px;
     border-radius: 5px;
 }
 
 .education .edu-col span i {
-    color: #FF6F61;
+    color: #4A5056;
 }
 
 .education .edu-col h3 {
@@ -616,7 +577,7 @@ a:focus {
 }
 
 .experience .exp-col span i {
-    color: #FF6F61;
+    color: #4A5056;
 }
 
 .experience .exp-col h3 {
