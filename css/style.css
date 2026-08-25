@@ -2,20 +2,20 @@
 /********** General CSS ***********/
 /**********************************/
 body {
-    color: #4A5056; /* Texto em cinza escuro para melhor leitura */
-    background: #E2E8F0; /* Fundo geral em Cinza Gelo */
+    color: #666666;
+    background: #F6D155;
     font-family: 'Open Sans', sans-serif;
 }
 
 a {
-    color: #2D3748;
+    color: #222222;
     transition: all .3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #4A5056;
+    color: #FF6F61;
     outline: none;
     text-decoration: none;
 }
@@ -26,74 +26,239 @@ a:focus {
 
 
 /**********************************/
-/**** Layout Sidebar (Cinza Antracite) ****/
+/****** Layout with Sidebar *******/
 /**********************************/
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+}
 
-/* Fundo da Sidebar */
 .wrapper .sidebar {
-    background: #4A5056 !important; /* Antracite / Cinza Escuro */
+    position: relative;
+    width: 100%;
+    float: left;
+    background: #222222;
 }
 
 .wrapper .content {
-    background: #E2E8F0; /* Ajuste do fundo do conteúdo */
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    float: left;
+    background: #F6D155;
 }
 
-/* Fundo do Menu Mobile/Padrão */
+.wrapper .sidebar-header,
+.wrapper .sidebar-footer {
+    display: none;
+}
+
 .navbar {
-    background: #4A5056 !important;
+    padding: 15px;
+    background: #222222 !important;
 }
 
-/* Links do Menu */
+.navbar-expand-md .navbar-nav .nav-item {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.navbar-expand-md .navbar-nav .nav-item:first-child{
+    border-top: none;
+}
+
 .navbar-expand-md .navbar-nav .nav-link {
-    color: #E2E8F0 !important; /* Texto Cinza Claro */
+    color: #ffffff;
+    padding: 5px 15px 7px 15px;
     transition: all .3s;
 }
 
-/* Ícones dos Links */
 .navbar-expand-md .navbar-nav .nav-link i {
-    color: #A0AEC0 !important; /* Ícones Cinza Médio */
+    color: #FF6F61;
     float: right;
     padding-top: 5px;
     transition: all .3s;
 }
 
-/* Estado Hover e Ativo no Menu */
 .navbar-expand-md .navbar-nav .nav-link:hover,
 .navbar-expand-md .navbar-nav .nav-link.active {
-    color: #FFFFFF !important;
-    background-color: rgba(255, 255, 255, 0.08);
+    color: #FF6F61;
 }
 
 .navbar-expand-md .navbar-nav .nav-link:hover i,
-.navbar-expand-md .navbar-nav .nav-link.active i {
-    color: #FFFFFF !important;
+.navbar-expand-md .navbar-nav .nav-link.active i{
+    color: #ffffff;
 }
 
-/* Bordas divisórias do Menu */
-.navbar-expand-md .navbar-nav .nav-item {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+.wrapper .sidebar,
+.wrapper .content {
+    -webkit-transition: margin 200ms ease-out;
+    -moz-transition: margin 200ms ease-out;
+    -o-transition: margin 200ms ease-out;
+    transition: margin 200ms ease-out;
 }
 
-/* Rodapé da Sidebar (Ícones Sociais na barra lateral) */
 @media (min-width: 768px) {
+    .wrapper .content {
+        padding: 30px 0px 30px 30px;
+    }
+    
     .wrapper .content::before,
     .wrapper .content::after {
-        background: #E2E8F0; /* Borda superior e inferior fixas em Cinza Gelo */
+        position: fixed;
+        content: "";
+        width: 100%;
+        height: 30px;
+        background: #F6D155;
+        z-index: 1;
+    }
+    
+    .wrapper .content::before {
+        top: 0;
+    }
+    
+    .wrapper .content::after {
+        bottom: 0;
+    }
+    
+    .wrapper .sidebar {
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        margin-left: -250px;
+        float: left;
+        overflow: auto;
+        scrollbar-width: thin;
+        scrollbar-color: gray;
+        z-index: 2;
     }
 
+    .wrapper .sidebar:hover {
+        margin-left: 0px;
+    }
+    
+    .wrapper .content {
+        position: relative;
+        width: calc(100% - 50px);
+        margin-left: 50px;
+        float: right;
+    }
+    
+    .wrapper .sidebar:hover  .sidebar-header {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .wrapper .sidebar .sidebar-header img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .navbar-brand {
+        display: none;
+    }
+    
+    .navbar {
+        padding: 15px 0;
+        flex-direction: column;
+    }
+    
+    .wrapper .sidebar:hover .navbar-expand-md .navbar-nav .nav-link {
+        padding: 5px 30px 7px 30px;
+    }
+    
+    .wrapper .sidebar::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .wrapper .sidebar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    .wrapper .sidebar::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+        border-radius: 7px
+    }
+    
+    .navbar-brand {
+        display: none;
+    }
+    
     .sidebar .sidebar-footer {
-        background: #4A5056 !important;
+        width: 300px;
+        position: fixed;
+        bottom: 0;
+        padding: 15px;
+        font-size: 0;
+        text-align: center;
+        background: #222222;
     }
-
+    
     .sidebar .sidebar-footer a {
-        color: #4A5056 !important;
-        background: #E2E8F0 !important;
-        border-radius: 50%;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        padding: 5px 0;
+        margin: 0 15px 15px 0;
+        text-align: center;
+        font-size: 18px;
+        color: #222222;
+        background: #FF6F61;
+    }
+    
+    .sidebar .sidebar-footer a:last-child {
+        margin-right: 0;
+    }
+    
+    .sidebar .sidebar-footer a:hover {
+        color: #FF6F61;
+        background: #ffffff;
+    }
+    
+    .sidebar:hover .sidebar-footer {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper .sidebar {
+        margin: 0;
     }
 
-    .sidebar .sidebar-footer a:hover {
-        color: #FFFFFF !important;
-        background: #2D3748 !important;
+    .wrapper .content {
+        width: calc(100% - 300px);
+        margin-left: 300px;
+    }
+
+    .sidebar .sidebar-header {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding: 5px 30px 7px 30px;
+    }
+    
+    .sidebar .sidebar-footer {
+        display: block;
+    }
+}
+
+@media (max-width: 1140px) {
+    .wrapper .content {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper .content {
+        padding: 15px;
     }
 }
 
@@ -116,16 +281,16 @@ a:focus {
 }
 
 .back-to-top i {
-    color: #4A5056;
+    color: #222222;
 }
 
 .back-to-top i:hover {
-    color: #2D3748;
+    color: #FF6F61;
 }
 
 .back-to-top {
-    -webkit-animation: action 1s infinite alternate;
-    animation: action 1s infinite alternate;
+    -webkit-animation: action 1s infinite  alternate;
+    animation: action 1s infinite  alternate;
 }
 
 @-webkit-keyframes action {
@@ -148,14 +313,14 @@ a:focus {
 }
 
 .header p {
-    color: #4A5056;
+    color:#1E88E5;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .header h1 {
-    color: #2D3748;
+    color: #222222;
     font-size: 50px;
     font-weight: 700;
 }
@@ -174,27 +339,27 @@ a:focus {
 .header .typed-cursor {
     font-size: 25px;
     font-weight: 300;
-    color: #2D3748;
+    color: #222222;
 }
 
 .large-btn .content-inner {
     font-size: 0;
-    border-bottom: 30px solid #E2E8F0; /* Amarelo substituído por Cinza Gelo */
+    border-bottom: 30px solid #F6D155;
 }
 
 .large-btn .btn {
     position: relative;
     width: 50%;
     padding: 15px 0;
-    color: #FFFFFF;
+    color: #FF6F61;
     font-size: 20px;
-    background: #4A5056;
+    background: #222222;
     border-radius: 0;
 }
 
 .large-btn .btn:last-child {
-    color: #FFFFFF;
-    background: #718096;
+    color: #222222;
+    background: #FF6F61;
 }
 
 .large-btn .btn i {
@@ -228,7 +393,7 @@ a:focus {
 }
 
 .content-header h2 {
-    color: #2D3748;
+    color: #222222;
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -243,7 +408,7 @@ a:focus {
     height: 3px;
     bottom: 0;
     left: 0;
-    background: #4A5056; /* Linha divisória em Antracite */
+    background: #FF6F61;
 }
 
 
@@ -254,8 +419,9 @@ a:focus {
     position: relative;
     padding: 60px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #E2E8F0; /* Amarelo substituído por Cinza Gelo */
+    border-bottom: 30px solid #F6D155;
 }
+
 
 .about img {
     width: 100%;
@@ -270,14 +436,14 @@ a:focus {
 
 .about .btn {
     border-radius: 0;
-    color: #ffffff;
-    background: #4A5056;
+    color: #222222;
+    background: #FF6F61;
     transition: all .3s;
 }
 
 .about .btn:hover {
-    color: #ffffff;
-    background: #2D3748;
+    color: #FF6F61;
+    background: #222222;
 }
 
 .about .skills {
@@ -301,14 +467,14 @@ a:focus {
 
 .about .progress {
     height: 5px;
-    border: 1px solid #A0AEC0;
+    border: 1px solid #FF6F61;
     border-radius: 0;
     background: #ffffff;
 }
 
 .about .progress .progress-bar {
     width: 1px;
-    background: #4A5056;
+    background: #FF6F61;
     border-radius: 0;
     transition: 1s;
 }
@@ -321,15 +487,15 @@ a:focus {
     position: relative;
     padding: 60px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #E2E8F0;
+    border-bottom: 30px solid #F6D155;
 }
 
 .education .edu-col {
     position: relative;
     width: 100%;
     padding: 20px 0 20px 20px;
-    border-left: 1px solid #CBD5E0;
-    border-bottom: 1px solid #CBD5E0;
+    border-left: 1px solid #FF6F61;
+    border-bottom: 1px solid #FF6F61;
 }
 
 .education .col-md-6:first-child .edu-col {
@@ -366,14 +532,14 @@ a:focus {
     content: "";
     width: 11px;
     height: 11px;
-    background: #4A5056;
+    background: #FF6F61;
     top: 5px;
     left: -26px;
     border-radius: 5px;
 }
 
 .education .edu-col span i {
-    color: #4A5056;
+    color: #FF6F61;
 }
 
 .education .edu-col h3 {
@@ -394,15 +560,15 @@ a:focus {
     position: relative;
     padding: 60px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #E2E8F0;
+    border-bottom: 30px solid #F6D155;
 }
 
 .experience .exp-col {
     position: relative;
     width: 100%;
     padding: 20px 0 20px 20px;
-    border-left: 1px solid #CBD5E0;
-    border-bottom: 1px solid #CBD5E0;
+    border-left: 1px solid #FF6F61;
+    border-bottom: 1px solid #FF6F61;
 }
 
 .experience .col-md-6:first-child .exp-col {
@@ -439,14 +605,14 @@ a:focus {
     content: "";
     width: 11px;
     height: 11px;
-    background: #4A5056;
+    background: #FF6F61;
     top: 5px;
     left: -26px;
     border-radius: 5px;
 }
 
 .experience .exp-col span i {
-    color: #4A5056;
+    color: #FF6F61;
 }
 
 .experience .exp-col h3 {
@@ -481,7 +647,7 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #E2E8F0;
+    border-bottom: 30px solid #F6D155;
 }
 
 .publications .pub-col {
@@ -492,7 +658,7 @@ a:focus {
 
 .publications .pub-col i {
     font-size: 30px;
-    color: #4A5056;
+    color: #FF6F61;
     margin-bottom: 15px;
 }
 
@@ -515,12 +681,13 @@ a:focus {
     line-height: 1.6;
 }
 
+/* Estilo para links dentro das publicações (opcional, se houver) */
 .publications .pub-col a {
-    color: #4A5056;
+    color: #FF6F61;
 }
 
 .publications .pub-col a:hover {
-    color: #2D3748;
+    color: #222222;
 }
 
 
@@ -531,9 +698,10 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #E2E8F0;
+    border-bottom: 30px solid #F6D155;
 }
 
+/* Reutilizando o estilo de coluna da seção service, adaptando para skills */
 .skills .srv-col {
     position: relative;
     width: 100%;
@@ -542,7 +710,7 @@ a:focus {
 
 .skills .srv-col i {
     font-size: 30px;
-    color: #4A5056;
+    color: #FF6F61;
     margin-bottom: 15px;
 }
 
@@ -558,6 +726,7 @@ a:focus {
     line-height: 1.6;
 }
 
+/* Reutilizando as classes antigas de skill se o HTML ainda as usar */
 .skills .skill-name {
     margin-top: 15px;
 }
@@ -575,14 +744,14 @@ a:focus {
 
 .skills .progress {
     height: 5px;
-    border: 1px solid #A0AEC0;
+    border: 1px solid #FF6F61;
     border-radius: 0;
     background: #ffffff;
 }
 
 .skills .progress .progress-bar {
     width: 1px;
-    background: #4A5056;
+    background: #FF6F61;
     border-radius: 0;
     transition: 1s;
 }
@@ -595,7 +764,7 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #E2E8F0;
+    border-bottom: 30px solid #F6D155;
 }
 
 .languages .srv-col {
@@ -606,7 +775,7 @@ a:focus {
 
 .languages .srv-col i {
     font-size: 30px;
-    color: #4A5056;
+    color: #FF6F61;
     margin-bottom: 15px;
 }
 
@@ -629,7 +798,7 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #E2E8F0;
+    border-bottom: 30px solid #F6D155;
 }
 
 .awards .srv-col {
@@ -640,7 +809,7 @@ a:focus {
 
 .awards .srv-col i {
     font-size: 30px;
-    color: #4A5056;
+    color: #FF6F61;
     margin-bottom: 15px;
 }
 
@@ -668,13 +837,13 @@ a:focus {
 .exp-col summary,
 .edu-col summary {
     font-weight: bold;
-    color: #2D3748;
+    color: #222222;
     outline: none;
 }
 
 .exp-col details[open] summary,
 .edu-col details[open] summary {
-    color: #4A5056;
+    color: #FF6F61;
 }
 
 .details-content ul {
@@ -696,7 +865,7 @@ a:focus {
     position: relative;
     padding: 60px 30px 30px 30px;
     background: #ffffff;
-    border-bottom: 30px solid #E2E8F0;
+    border-bottom: 30px solid #F6D155; /* Opcional, se for a última seção */
 }
 
 .references .srv-col {
@@ -707,7 +876,7 @@ a:focus {
 
 .references .srv-col i {
     font-size: 30px;
-    color: #4A5056;
+    color: #FF6F61;
     margin-bottom: 15px;
 }
 
@@ -740,15 +909,15 @@ a:focus {
 
 .contact .contact-info p i {
     width: 25px;
-    color: #4A5056;
+    color: #FF6F61;
 }
 
 .contact .contact-info p a {
-    color: #4A5056;
+    color: #666666;
 }
 
 .contact .contact-info p a:hover {
-    color: #2D3748;
+    color: #FF6F61;
     text-decoration: none;
 }
 
@@ -760,8 +929,8 @@ a:focus {
     width: 35px;
     height: 35px;
     padding: 5px 0;
-    color: #ffffff;
-    background: #4A5056;
+    color: #222222;
+    background: #FF6F61;
     border-radius: 0;
     margin-top: 15px;
     margin-right: 15px;
@@ -773,8 +942,8 @@ a:focus {
 }
 
 .contact .social a:hover {
-    color: #ffffff;
-    background: #2D3748;
+    color: #FF6F61;
+    background: #222222;
 }
 
 .contact .form {
@@ -789,19 +958,19 @@ a:focus {
 
 .contact .form .form-control:focus {
     box-shadow: none;
-    border-color: #4A5056;
+    border-color: #FF6F61;
 }
 
 .contact .form .btn {
-    color: #ffffff;
-    background: #4A5056;
+    color: #222222;
+    background: #FF6F61;
     border-radius: 0;
     transition: all .3s;
 }
 
 .contact .form .btn:hover {
-    color: #ffffff;
-    background: #2D3748;
+    color: #FF6F61;
+    background: #222222;
 }
 
 
@@ -812,7 +981,7 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 30px 30px 0 30px;
-    background: #E2E8F0; /* Amarelo substituído por Cinza Gelo */
+    background: #F6D155;
 }
 
 .footer .col-md-6:last-child {
@@ -827,21 +996,21 @@ a:focus {
 }
 
 .footer p {
-    color: #4A5056;
+    color: #222222;
     margin: 0;
 }
 
 .footer a {
-    color: #2D3748;
+    color: #FF6F61;
     font-weight: 600;
 }
 
 .footer a:hover {
-    color: #4A5056;
+    color: #222222;
 }
 
 
-/* Adicionais para detalhes de educação e experiência */
+/* Adicione no final do seu arquivo style.css */
 .edu-col details {
     margin-top: 10px;
     cursor: pointer;
@@ -849,22 +1018,22 @@ a:focus {
 
 .edu-col summary {
     font-weight: bold;
-    color: #2D3748;
+    color: #444; /* Cor do título clicável */
     outline: none;
 }
 
 .edu-col details[open] summary {
-    color: #4A5056;
+    color: #f72424; /* Cor diferente quando aberto (opcional, mude para a cor do seu site) */
 }
 
 .details-content {
     margin-top: 15px;
     padding: 15px;
-    background-color: #F7FAFC;
-    border-left: 3px solid #4A5056;
+    background-color: #f9f9f9; /* Fundo leve para destacar */
+    border-left: 3px solid #f72424; /* Barra lateral (mude para a cor do seu site) */
     border-radius: 4px;
 }
 
 .details-content p {
-    margin-bottom: 8px !important;
+    margin-bottom: 8px !important; /* Ajuste o espaçamento entre os parágrafos internos */
 }
