@@ -955,6 +955,19 @@ a:focus {
     }
 }
 
+/* Botão More Details com flecha na seção Education */
+.edu-col .btn-more-details {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2D3748;
+    text-decoration: none;
+    padding: 6px 14px;
+    background-color: #E2E8F0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
 .edu-col .btn-more-details:hover {
     color: #ffffff;
     background-color: #4A5056;
