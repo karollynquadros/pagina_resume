@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Research & Academic Studies - Karollyn Larissa de Quadros</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS Libraries -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #4A5056;
+      font-family: 'Open Sans', sans-serif;
+      padding-bottom: 60px;
+    }
+
+    .studies-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .btn-back-home {
+      background-color: #E2E8F0;
+      color: #2D3748;
+      font-weight: 600;
+      margin-bottom: 40px;
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back-home:hover {
+      background-color: #4A5056;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* Linha do Estudo */
+    .study-row {
+      margin-bottom: 70px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .study-row:last-child {
+      border-bottom: none;
+    }
+
+    /* Títulos */
+    .study-title {
+      color: #2D3748;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    /* Parágrafos explicativos */
+    .study-text p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #4A5056;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    /* Mosaico de 4 Imagens (Grid 2x2) */
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border: 1px solid #E2E8F0;
+      border-radius: 4px;
+    }
+
+    /* Botão escuro */
+    .btn-full-work {
+      background-color: #2D3748;
+      color: #ffffff !important;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      display: inline-block;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-full-work:hover {
+      background-color: #4A5056;
+      text-decoration: none;
+    }
+
+    /* Flexbox de botões quando há múltiplos */
+    .button-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="studies-container">
+    
+    <!-- Botão de Voltar para o Portfólio Principal -->
+    <a href="index.html" class="btn-back-home"><i class="fa fa-arrow-left"></i> Back to Portfolio</a>
+
+    <!-- ITEM 1: TEXTO NA ESQUERDA | IMAGENS NA DIREITA -->
+    <div class="row study-row align-items-center" id="masters">
+      <div class="col-lg-6 pr-lg-4">
+        <h2 class="study-title">Hidrologia Estatística & Balanço Hídrico</h2>
+        <div class="study-text">
+          <p>
+            Análise de conjuntos de dados históricos abrangendo séries temporais fluviométricas e pluviométricas. Aplicação de equações de balanço hídrico aliadas a dados de sensoriamento remoto (missões GRACE e GRACE-FO) para estimativa de evapotranspiração em escala de bacia no estado do Paraná.
+          </p>
+          <p>
+            Desenvolvimento de rotinas e algoritmos em Python e R para filtragem, consistência, correção de viés e modelagem estatística de eventos extremos e disponibilidade hídrica.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+        <!-- Mosaico 2x2 de gráficos -->
+        <div class="image-grid">
+          <img src="img/stats_1.jpg" alt="Boxplot de Vazões">
+          <img src="img/stats_2.jpg" alt="Curva de Permanência">
+          <img src="img/stats_3.jpg" alt="Correlação Chuva-Vazão">
+          <img src="img/stats_4.jpg" alt="Ajuste de Distribuição">
+        </div>
+        <!-- Botão de Ação (Abre em outra aba) -->
+        <div class="text-right">
+          <a href="pdf/master-thesis.pdf" target="_blank" class="btn-full-work">Trabalho Completo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 2: IMAGENS NA ESQUERDA | TEXTO NA DIREITA (ALTERNADO) -->
+    <div class="row study-row align-items-center" id="bachelor">
+      <div class="col-lg-6 order-2 order-lg-1 mt-4 mt-lg-0 text-center">
+        <!-- Mosaico 2x2 de fotos/gráficos -->
+        <div class="image-grid">
+          <img src="img/exp_1.jpg" alt="Curva de Descarga">
+          <img src="img/exp_2.jpg" alt="Perfil de Velocidades ADV">
+          <img src="img/exp_3.jpg" alt="Medição de Vazão em Campo">
+          <img src="img/exp_4.jpg" alt="Visita Técnica Usina">
+        </div>
+        <!-- Botões de Ação para relatórios específicos (Abrem em outra aba) -->
+        <div class="button-group justify-content-start">
+          <a href="pdf/tcc-delft3d.pdf" target="_blank" class="btn-full-work">Modelagem Delft3D</a>
+          <a href="pdf/medicao-tracador.pdf" target="_blank" class="btn-full-work">Medição com Traçador</a>
+          <a href="pdf/medicao-adv.pdf" target="_blank" class="btn-full-work">Medição com ADV</a>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 pl-lg-4">
+        <h2 class="study-title">Hidrologia Experimental & Modelagem Hidrodinâmica</h2>
+        <div class="study-text">
+          <p>
+            Simulação computacional hidrodinâmica utilizando o modelo Delft3D para avaliar o impacto da instalação de painéis fotovoltaicos flutuantes na dinâmica de ondas internas e estratificação térmica em reservatórios.
+          </p>
+          <p>
+            Experiência prática em hidrometria de campo, incluindo ajuste de curvas de descarga, calibração de sensores e medições de vazão com Acoustic Doppler Velocimeter (ADV) e técnica de traçadores.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 3: TEXTO NA ESQUERDA | IMAGENS NA DIREITA -->
+    <div class="row study-row align-items-center" id="simepar">
+      <div class="col-lg-6 pr-lg-4">
+        <h2 class="study-title">Sistemas de Alerta e Monitoramento de Riscos (SIMEPAR)</h2>
+        <div class="study-text">
+          <p>
+            Desenvolvimento de sistemas piloto de alerta precoce para escorregamentos de encostas em rodovias com base em curvas de limiar crítico de chuva acumulada (Serra do Mar).
+          </p>
+          <p>
+            Criação de índices operacionais de status de seca e monitoramento de mananciais de abastecimento público para concessionárias de saneamento.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+        <div class="image-grid">
+          <img src="img/hydro_1.jpg" alt="Limiar de Chuva">
+          <img src="img/hydro_2.jpg" alt="Monitoramento de Encosta">
+          <img src="img/hydro_3.jpg" alt="Índice de Seca">
+          <img src="img/hydro_4.jpg" alt="Gestão de Mananciais">
+        </div>
+        <div class="text-right">
+          <a href="pdf/simepar-research.pdf" target="_blank" class="btn-full-work">Trabalho Completo</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
