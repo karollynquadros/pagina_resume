@@ -954,3 +954,55 @@ a:focus {
         height: 150px;
     }
 }
+/* Botão More Details com flecha na seção Education */
+.edu-col .btn-more-details {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2D3748;
+    text-decoration: none;
+    padding: 6px 14px;
+    background-color: #E2E8F0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.edu-col .btn-more-details:hover {
+    color: #ffffff;
+    background-color: #4A5056;
+    text-decoration: none;
+}
+
+.edu-col .btn-more-details i {
+    transition: transform 0.3s ease;
+}
+
+.edu-col .btn-more-details:hover i {
+    transform: translateX(4px);
+}
+
+/* Botão principal para a página inteira de estudos */
+.btn-see-all-studies {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #4A5056;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-see-all-studies:hover {
+    background-color: #2D3748;
+    text-decoration: none;
+}
+
+.btn-see-all-studies i {
+    transition: transform 0.3s ease;
+}
+
+.btn-see-all-studies:hover i {
+    transform: translateX(5px);
+}
